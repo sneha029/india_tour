@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 class="title">🌸 WanderHer India 🌸</h1>
+<p class="subtitle">
+    Discover the most beautiful places of India and let your soul breathe.
+</p>
+
+<div class="cards">
+{% for place in places %}
+    <div class="card">
+        <img src="{{ place.image_url }}">
+        <h3>{{ place.name }}</h3>
+        <p>{{ place.location }}</p>
+        <a href="/place/{{ place.id }}/">View Details</a>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}

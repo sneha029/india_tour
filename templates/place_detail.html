@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2 style="color:#ff4d6d;">{{ place.name }}</h2>
+<img src="{{ place.image_url }}" class="detail-img">
+
+<p><b>📍 Location:</b> {{ place.location }}</p>
+<p><b>🕒 Best Time to Visit:</b> {{ place.best_time }}</p>
+
+<p style="font-size:17px; line-height:1.7;">
+    {{ place.description }}
+</p>
+
+
+<p style="font-style: italic; color:#777;">
+    “Sometimes, the best therapy is a change of place.”
+</p>
+
+<a href="/">⬅ Back to Explore</a>
+
+{% endblock %}

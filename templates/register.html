@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="auth-box">
+    <h2>Create Your Travel Account ✈️</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password1" placeholder="Password" required>
+        <input type="password" name="password2" placeholder="Confirm Password" required>
+        <button type="submit">Register</button>
+    </form>
+
+    <p>Already registered?
+        <a href="{% url 'login' %}">Login</a>
+    </p>
+</div>
+
+{% endblock %}
